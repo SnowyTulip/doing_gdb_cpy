@@ -1,0 +1,2 @@
+CompileFlags:
+    Remove: [ "-MMD", "-gdwarf-2", "-emit-llvm", "-mcpu=qx320f", "-target", "dsp" ]

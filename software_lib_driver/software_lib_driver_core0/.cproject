@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="example.toolchain.configuration.release.683764157">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="example.toolchain.configuration.release.683764157" moduleId="org.eclipse.cdt.core.settings" name="Release">
+                				
+                <macros>
+                    					
+                    <stringMacro name="TOOLHOME" type="VALUE_PATH_DIR" value="F:\IDE\toolchains\toolchain_3slot_320f"/>
+                    				
+                </macros>
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="rm -f" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.VCErrorParser" id="example.toolchain.configuration.release.683764157" name="Release" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.enablement=null,org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.image=null,org.eclipse.cdt.docker.launcher.containerbuild.property.connection=null" parent="example.toolchain.configuration.release" postbuildStep="..\after_cmd.bat ${TOOLHOME}\bin ${ProjName}.out">
+                    					
+                    <folderInfo id="example.toolchain.configuration.release.683764157." name="/" resourcePath="">
+                        						
+                        <toolChain id="example.toolchain.toolchain.145232962" name="Swift Tool-chain" superClass="example.toolchain.toolchain">
+                            							
+                            <targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="example.toolchain.targetplatform.959960961" isAbstract="false" name="Swift Target Platform" osList="win32" superClass="example.toolchain.targetplatform"/>
+                            							
+                            <builder buildPath="${workspace_loc:/qx_c2000}/Release" id="example.toolchain.builder.1986030052" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Swift Builder" parallelBuildOn="true" parallelizationNumber="unlimited" superClass="example.toolchain.builder"/>
+                            							
+                            <tool command="bin\clang.exe" id="example.toolchain.compiler.947245791" name="Clang" superClass="example.toolchain.compiler">
+                                								
+                                <option id="example.toolchain.compiler.general.optimize.1196714345" name="Other optimization flags" superClass="example.toolchain.compiler.general.optimize" useByScannerDiscovery="false" value="-emit-llvm " valueType="string"/>
+                                								
+                                <option id="example.toolchain.compiler.general.otherFlags.1905659493" name="Other flags" superClass="example.toolchain.compiler.general.otherFlags" useByScannerDiscovery="false" value="-S -O0 -gdwarf-2 -mcpu=qx320f -DQX_C2000_CORE0 -D__ELF__ -D__dsp__" valueType="string"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="example.toolchain.compiler.general.paths.861907533" name="Include paths" superClass="example.toolchain.compiler.general.paths" useByScannerDiscovery="true" valueType="symbolFiles">
+                                    									
+                                    <listOptionValue builtIn="false" value="${TOOLHOME}/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/device/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/device/inc/hw_inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/tests}&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="example.toolchain.compiler.input.1901468191" name="Compiler Input" superClass="example.toolchain.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool command="bin\llc.exe" id="example.toolchain.llc.1728924063" name="Llc" superClass="example.toolchain.llc">
+                                								
+                                <option id="example.toolchain.llc.general.chip.1498562743" name="Specify chip" superClass="example.toolchain.llc.general.chip" useByScannerDiscovery="false" value="qx320f" valueType="string"/>
+                                								
+                                <option id="example.toolchain.llc.general.filetype.840024776" name="Output file type" superClass="example.toolchain.llc.general.filetype" useByScannerDiscovery="false" value="obj" valueType="string"/>
+                                							
+                            </tool>
+                            							
+                            <tool command="bin\ld.exe" commandLinePattern="${TOOLHOME}\${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT} ${INPUTS} -lc -lm -lrt -ldspsim" id="example.toolchain.linker.1841227797" name="Linker" superClass="example.toolchain.linker">
+                                								
+                                <option id="example.toolchain.linker.general.spath.988297990" name="Library search path" superClass="example.toolchain.linker.general.spath" useByScannerDiscovery="false" value="${TOOLHOME}\lib" valueType="string"/>
+                                								
+                                <option id="example.toolchain.linker.general.script.961864099" name="Linker script" superClass="example.toolchain.linker.general.script" useByScannerDiscovery="false" value="qx320f_link_core0.x" valueType="string"/>
+                                							
+                            </tool>
+                            							
+                            <tool command="bin\as.exe" id="example.toolchain.assembler.398886259" name="Assembler" superClass="example.toolchain.assembler">
+                                								
+                                <option id="example.toolchain.assembler.general.debugLevel.1076430253" name="Debug level" superClass="example.toolchain.assembler.general.debugLevel" useByScannerDiscovery="false" value="example.toolchain.assembler.general.debugLevel.none" valueType="enumerated"/>
+                                							
+                            </tool>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding="tests/test_sysctl.c|tests/test_isr.c|device/src/qx_spi.c|device/src/qx_i2c.c|device/src/qx_fsi.c|device/src/qx_flash.c|tests/test_timer.c|tests/test_pmbus.c|tests/test_fsi.c|tests/test_flash.c|tests/test_cmpss.c|tests/test_asys.c|tests/test_i2c.c|tests/test_pll.c|device/src/qx_cmpss.c|device/src/qx_xbar.c|device/src/qx_sdfm.c|device/src/qx_sci.c|device/src/qx_pga.c|device/src/qx_eqep.c|device/src/qx_epwm.c|device/src/qx_ecap.c|device/src/qx_dma.c|device/src/qx_dac.c|device/src/qx_adc.c|tests/test_xbar.c|tests/test_tracebuf.c|tests/test_spi.c|tests/test_sdfm.c|tests/test_sci.c|tests/test_proxy.c|tests/test_pga.c|tests/test_mem.c|tests/test_ipc.c|tests/test_gpio.c|tests/test_global.c|tests/test_eqep.c|tests/test_epwm.c|tests/test_ecap.c|tests/test_dma.c|tests/test_dac.c|tests/test_cputimer.c|tests/test_adc.c|device/src/core1|asm_core1.s|device/src/qx_global_def.c|device/src/qx_hrcap.c|tests/test_hrcap.c|tests/test_print.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            			
+            <storageModule moduleId="ilg.gnumcueclipse.managedbuild.packs"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="driver_test.example.toolchain.executable.886830257" name="Swift Executable" projectType="example.toolchain.executable"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="refreshScope" versionNumber="2">
+        		
+        <configuration configurationName="Release">
+            			
+            <resource resourceType="PROJECT" workspacePath="/qx_c2000"/>
+            		
+        </configuration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+    	
+    <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+    
+</cproject>

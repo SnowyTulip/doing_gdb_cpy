@@ -1,0 +1,8 @@
+open 10.18.30.191
+[your_ftp_name]
+[your_ftp_password]
+cd qx_c2000/vcs
+put outer_data_mem_core0.dat
+put outer_insn_mem_core0.dat
+put ../../init_mem.txt
+bye

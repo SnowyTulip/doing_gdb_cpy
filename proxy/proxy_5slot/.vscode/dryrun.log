@@ -1,0 +1,8 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/mnt/d/cygwin/home/hi/proxy/proxy_5slot'
+rm -f or_debug_proxy
+rm -f or_debug_proxy_static
+find ./ -name "*~" | xargs rm -f
+g++ -I./includes  -O2 -g -D USB_ENDPOINT_ENABLED=1 src/or_debug_proxy.c src/gdb.c src/FT2232c.cpp src/FT2232cMpsseJtag.cpp src/usb_functions.c src/linux_usb_driver_calls.c  -lftd2xx -o or_debug_proxy
+make: Leaving directory '/mnt/d/cygwin/home/hi/proxy/proxy_5slot'
+ 

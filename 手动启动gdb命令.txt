@@ -1,0 +1,7 @@
+>>> D:\IDE\toolchains\toolchain_3slot_320f\bin\gdb.exe  
+>>> set target-async on                               		# 开启异步调试
+>>> set debug remote                              		# 让gdb打印调试信息
+>>> target remote :3333			    			# target remote <IP>:3333 
+>>> load Release/hello.out
+>>> file Release/hello.out              	             
+>>> c&                                  			# c更换为异步执行命令 "c&"

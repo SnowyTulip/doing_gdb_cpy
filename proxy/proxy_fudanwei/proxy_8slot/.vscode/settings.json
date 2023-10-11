@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "usb_driver_calls.h": "c",
+        "time.h": "c"
+    }
+}

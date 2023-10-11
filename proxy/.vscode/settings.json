@@ -1,0 +1,12 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "select.h": "c",
+        "ioctl.h": "c",
+        "poll.h": "c",
+        "tcp.h": "c",
+        "in.h": "c",
+        "netdb.h": "c",
+        "win_ftcjtag_ptrs.h": "c"
+    }
+}

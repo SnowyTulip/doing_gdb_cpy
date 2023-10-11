@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "or_debug_proxy.h": "c",
+        "win_ftcjtag.h": "c",
+        "ft2232cmpssejtag.h": "c"
+    }
+}

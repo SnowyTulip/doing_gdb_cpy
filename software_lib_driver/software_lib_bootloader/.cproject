@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="example.toolchain.configuration.release.232411760">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="example.toolchain.configuration.release.232411760" moduleId="org.eclipse.cdt.core.settings" name="Release">
+                				
+                <macros>
+                    					
+                    <stringMacro name="TOOLHOME" type="VALUE_PATH_DIR" value="D:\gitlab\toolchain\toolchains\toolchain_3slot_320f"/>
+                    				
+                </macros>
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="rm -f" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.VCErrorParser" id="example.toolchain.configuration.release.232411760" name="Release" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="example.toolchain.configuration.release" postbuildStep="..\after_cmd.bat ${TOOLHOME}\bin ${ProjName}.out">
+                    					
+                    <folderInfo id="example.toolchain.configuration.release.232411760." name="/" resourcePath="">
+                        						
+                        <toolChain id="example.toolchain.toolchain.1537840636" name="Swift Tool-chain" superClass="example.toolchain.toolchain">
+                            							
+                            <targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="example.toolchain.targetplatform.609864960" isAbstract="false" name="Swift Target Platform" osList="win32" superClass="example.toolchain.targetplatform"/>
+                            							
+                            <builder buildPath="${workspace_loc:/bootloader}/Release" id="example.toolchain.builder.784092935" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Swift Builder" superClass="example.toolchain.builder"/>
+                            							
+                            <tool command="bin\clang.exe" id="example.toolchain.compiler.1595958387" name="Clang" superClass="example.toolchain.compiler">
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="example.toolchain.compiler.general.paths.2083626547" name="Include paths" superClass="example.toolchain.compiler.general.paths" useByScannerDiscovery="true" valueType="symbolFiles"/>
+                                								
+                                <option id="example.toolchain.compiler.general.otherFlags.1734551143" name="Other flags" superClass="example.toolchain.compiler.general.otherFlags" useByScannerDiscovery="false" value="-S -mcpu=qx320f" valueType="string"/>
+                                								
+                                <inputType id="example.toolchain.compiler.input.1594472217" name="Compiler Input" superClass="example.toolchain.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool command="bin\llc.exe" id="example.toolchain.llc.1386302084" name="Llc" superClass="example.toolchain.llc">
+                                								
+                                <option id="example.toolchain.llc.general.chip.1803941291" name="Specify chip" superClass="example.toolchain.llc.general.chip" useByScannerDiscovery="false" value="qx320f" valueType="string"/>
+                                							
+                            </tool>
+                            							
+                            <tool command="bin\ld.exe" commandLinePattern="${TOOLHOME}\${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT} ${INPUTS}" id="example.toolchain.linker.340550216" name="Linker" superClass="example.toolchain.linker">
+                                								
+                                <option id="example.toolchain.linker.general.script.173326188" name="Linker script" superClass="example.toolchain.linker.general.script" useByScannerDiscovery="false" value="qx320f_link_bootloader.x" valueType="string"/>
+                                							
+                            </tool>
+                            							
+                            <tool command="bin\as.exe" id="example.toolchain.assembler.1047127935" name="Assembler" superClass="example.toolchain.assembler"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="bootloader.example.toolchain.executable.996408135" name="Swift Executable" projectType="example.toolchain.executable"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="refreshScope" versionNumber="2">
+        		
+        <configuration configurationName="Release">
+            			
+            <resource resourceType="PROJECT" workspacePath="/bootloader"/>
+            		
+        </configuration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+    	
+    <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+    
+</cproject>
