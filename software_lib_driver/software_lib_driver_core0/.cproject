@@ -9,7 +9,7 @@
                 				
                 <macros>
                     					
-                    <stringMacro name="TOOLHOME" type="VALUE_PATH_DIR" value="F:\IDE\toolchains\toolchain_3slot_320f"/>
+                    <stringMacro name="TOOLHOME" type="VALUE_PATH_DIR" value="D:\toolchains\toolchain_3slot_320f"/>
                     				
                 </macros>
                 				
