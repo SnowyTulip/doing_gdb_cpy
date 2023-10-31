@@ -79,7 +79,9 @@
                                 								
                                 <option id="example.toolchain.linker.general.spath.988297990" name="Library search path" superClass="example.toolchain.linker.general.spath" useByScannerDiscovery="false" value="${TOOLHOME}\lib" valueType="string"/>
                                 								
-                                <option id="example.toolchain.linker.general.script.961864099" name="Linker script" superClass="example.toolchain.linker.general.script" useByScannerDiscovery="false" value="qx320f_link_core0.x" valueType="string"/>
+                                <option id="example.toolchain.linker.general.script.961864099" name="Linker script" superClass="example.toolchain.linker.general.script" useByScannerDiscovery="false" value="ldscript_DSPCore0.ld" valueType="string"/>
+                                								
+                                <option id="example.toolchain.linker.general.otherFlag.1021007725" name="Other flags" superClass="example.toolchain.linker.general.otherFlag" useByScannerDiscovery="false" value="-M=linkMapFile" valueType="string"/>
                                 							
                             </tool>
                             							

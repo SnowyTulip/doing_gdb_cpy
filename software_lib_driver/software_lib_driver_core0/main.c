@@ -1,6 +1,8 @@
 #include "common.h"
 int m = 0;
 int arr_stack [100];
+float s = 1;
+float s1 = 0.2;
 
 static void delay(int cnt) {
 	cnt = cnt > 0 ? cnt : 0;
@@ -17,6 +19,10 @@ int main() {
 
 		m += 1;
 		m %= 100;
+
+		s ++ ;
+		s1 ++;
+		s += s1/s;
 
 		arr_stack[m] = m+1;
 		//delay(10000);
